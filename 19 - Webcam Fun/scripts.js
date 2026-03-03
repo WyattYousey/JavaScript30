@@ -26,10 +26,10 @@ function paintToCanvas() {
     setInterval(() => {
         ctx.drawImage(video, 0, 0, width, height);
         let pxls = ctx.getImageData(0, 0, width, height);
-        pxls = redEffect(pxls);
+        // pxls = redEffect(pxls);
         // pxls = rgbSplit(pxls);
         // ctx.globalAlpha = 0.5;
-        // pxls = greenScreen(pxls);
+        pxls = greenScreen(pxls);
         ctx.putImageData(pxls, 0, 0);
     }, 16);
 }
